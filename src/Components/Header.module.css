@@ -1,0 +1,21 @@
+.header {
+    background: var(--gray-700);
+    padding: 4.5rem 0 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.to {
+    color: var(--blue);
+    font-weight: 900;
+}
+
+.do {
+    color: var(--purple-dark);
+    font-weight: 900;
+}
+
+.rocket {
+    margin-right: 0.75rem;
+}

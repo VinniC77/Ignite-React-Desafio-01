@@ -1,0 +1,47 @@
+.task {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    max-width: 46rem;
+    margin: 1.5rem auto auto;
+    background: var(--gray-400);
+    padding: 1rem 1.25rem;
+    border-radius: 0.5rem;
+}
+
+.radio {
+    display: none;
+}
+
+.content {
+    font-size: 0.875rem;
+    color: var(--gray-100);
+    line-height: 1.4;
+    text-align: start;
+}
+
+.radio + .teste:before {
+    content: '';
+    display: inline-block;
+    height: 1.25rem;
+    width: 1.25rem;
+    box-sizing: border-box;
+    border: 2px solid var(--blue);
+    border-radius: 50%;
+    margin-right: 0.75rem;
+    background: transparent;
+    vertical-align: middle;
+}
+
+.radio:checked + .teste:before {
+    background: var(--purple-dark);
+    border: none;
+    background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 10 10'%3E%3Cg class='nc-icon-wrapper' stroke-width='1' fill='%23555555'%3E%3Cpath fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' data-cap='butt' d='M2.83 4.72l1.58 1.58 2.83-2.83'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.task button {
+    background: transparent;
+    border: 0;
+    color: var(--gray-300);
+    cursor: pointer;
+}

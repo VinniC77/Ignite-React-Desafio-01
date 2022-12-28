@@ -30,4 +30,10 @@
     color: var(--white);
     border-radius: 8px;
     border: none;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.addBtn:hover {
+    background: var(--blue);
 }

@@ -1,14 +1,24 @@
+import { Task } from "./Task";
 import styles from "./TaskHeader.module.css";
 
-export const TaskHeader = () => {
+export const TaskHeader = ({ tasks }) => {
+
+  const tasksQtd = tasks.length
+  const completedTasks = tasks.filter(task => task.isCompleted).length
+
   return (
-    <div className={styles.miniHeader}>
-      <h3 className={styles.taskCounter}>
-        Tarefas criadas <span>0</span>
-      </h3>
-      <h3 className={styles.taskCounter}>
-        Concluídas <span>0</span>
-      </h3>
-    </div>
+    <>
+      <section className={styles.miniHeader}>
+        <h3 className={styles.taskCounter}>
+          Tarefas criadas <span>{tasksQtd}</span>
+        </h3>
+        <h3 className={styles.purple}>
+          Concluídas <span>{completedTasks} de {tasksQtd}</span>
+        </h3>
+      </section>
+      <div>
+        {tasks.map(task => <Task key={task.id} task={task} />)}
+      </div>
+    </>
   );
 };
